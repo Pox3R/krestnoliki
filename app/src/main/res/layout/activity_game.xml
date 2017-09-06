@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e12e2e"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/cellID0"
+            android:layout_width="112dp"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:scaleType="fitXY"
+            android:padding="3dp"/>
+
+        <View
+            android:layout_width="9dp"
+            android:layout_height="match_parent"
+            android:background="#e12e2e" />
+
+        <ImageButton
+            android:id="@+id/cellID1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:scaleType="fitXY"
+            android:padding="3dp"/>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="#e12e2e" />
+
+        <ImageButton
+            android:id="@+id/cellID2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:scaleType="fitXY"
+            android:padding="3dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#e12e2e" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/cellID3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:scaleType="fitXY"
+            android:padding="3dp"/>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="#e12e2e" />
+
+        <ImageButton
+            android:id="@+id/cellID4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:scaleType="fitXY"
+            android:padding="3dp"/>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="#e12e2e" />
+
+        <ImageButton
+            android:id="@+id/cellID5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:scaleType="fitXY"
+            android:padding="3dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#e12e2e" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/cellID6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:scaleType="fitXY"
+            android:padding="3dp"/>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="#e12e2e" />
+
+        <ImageButton
+            android:id="@+id/cellID7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:scaleType="fitXY"
+            android:padding="3dp"/>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="#e12e2e" />
+
+        <ImageButton
+            android:id="@+id/cellID8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:scaleType="fitXY"
+            android:padding="3dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="Статус: "
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="Идет игра"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/buttonStart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Новая игра"
+            android:background="#05d901"
+            android:textColor="#fff"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:layout_weight="3.30" />
+
+        <Button
+            android:id="@+id/buttonMenu"
+            android:layout_width="110dp"
+            android:layout_height="58dp"
+            android:background="#05d901"
+            android:padding="10dp"
+            android:text="Главное меню"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+</LinearLayout>
