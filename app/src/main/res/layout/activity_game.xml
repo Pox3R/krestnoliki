@@ -158,7 +158,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000"
-            android:text="Статус: "
+            android:text="@string/status"
             android:textSize="20sp"/>
 
         <TextView
@@ -166,7 +166,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000"
-            android:text="Идет игра"
+            android:text="@string/going_game"
             android:textSize="20sp"/>
     </LinearLayout>
 
@@ -181,7 +181,7 @@
             android:id="@+id/buttonStart"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Новая игра"
+            android:text="@string/new_game"
             android:background="#05d901"
             android:textColor="#fff"
             android:layout_marginRight="5dp"
@@ -194,7 +194,7 @@
             android:layout_height="58dp"
             android:background="#05d901"
             android:padding="10dp"
-            android:text="Главное меню"
+            android:text="@string/main_menu"
             android:textColor="#fff" />
 
     </LinearLayout>

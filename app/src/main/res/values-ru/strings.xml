@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Крестики - Нолики</string>
+    <string name="help">ПРАВИЛА\n\nИгроки по очереди ходят на поле 3х3. Первый игрок, кто выстроит в ряд 3 своих знака по горизонтали, вертикали или диагонали, будет победителем. Первый ход - крестики.\n</string>
+    <string name="status">Статус: </string>
+    <string name="going_game">Идет игра</string>
+    <string name="draw">Ничья</string>
+    <string name="xwin">Победа крестиков!</string>
+    <string name="owin">Победа ноликов!</string>
+    <string name="new_game">Новая игра</string>
+    <string name="main_menu">Главное меню</string>
+    <string name="back">Назад!</string>
+    <string name="gamemode_1">Игрок против игрока</string>
+    <string name="htp">Помощь</string>
+    <string name="oTurn">Ход ноликов</string>
+    <string name="xTurn">Ход крестиков</string>
+</resources>

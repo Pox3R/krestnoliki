@@ -1,4 +1,16 @@
 <resources>
-    <string name="app_name">КрестикиНолики</string>
-    <string name="action_settings">Настройки</string>
+    <string name="app_name">Tick-tack-toe</string>
+    <string name="help">RULES\n\nPlayers take turns to walk on the field 3x3. The first player who will line up 3 of his characters horizontally, vertically or diagonally, will be the winner. The first move - crosses.\n</string>
+    <string name="status">Status: </string>
+    <string name="going_game">Game</string>
+    <string name="draw">Draw</string>
+    <string name="xwin">X - WIN</string>
+    <string name="owin">O - WIN</string>
+    <string name="new_game">New Game</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="back">Back</string>
+    <string name="gamemode_1">Player vs Player</string>
+    <string name="htp">How to play</string>
+    <string name="oTurn">O turn</string>
+    <string name="xTurn">X turn</string>
 </resources>

@@ -112,17 +112,19 @@ public class ActivityGame extends Activity implements View.OnClickListener {
 
     private void moving(int n) {
         if(stopGame) return;
+        int oturn = 0;
+        int xturn = 1;
 
         if(array[n] == 0) {
             if(gameMode == 1) {
                 if(turn == 1) {
                     arrCell[n].setImageBitmap(imageX);
-                    status("Нолики");
+                    status(oturn);
                     array[n] = 1;
                     turn = 2;
                 } else {
                     arrCell[n].setImageBitmap(imageO);
-                    status("Крестики");
+                    status(xturn);
                     array[n] = 2;
                     turn = 1;
                 }
@@ -144,26 +146,26 @@ public class ActivityGame extends Activity implements View.OnClickListener {
                 emptyCell++;
             }
         }
-
+        int owin = 3, xwin = 2, draw = 4;
         if (check(1)) {
-            status("Победа крестиков!");
+            status(xwin);
             stopGame = true;
         } else if (check(2)) {
-            status("Победа ноликов!");
+            status(owin);
             stopGame = true;
         } else if (emptyCell == 0) {
-            status("Ничья");
+            status(draw);
             stopGame = true;
         }
     }
 
     private boolean check(int n) {
-        int checkCell = 0, goriz = 0, vertik = 0, diag = 0;
+        int checkCell = 0, goriz, vertik, diag = 0;
 
         for (int i = 0; i < 3; i++) {
             goriz = 0;
             for (int j = 0; j < 3; j++) {
-                if(j != 3 && array[checkCell] == n) goriz++;
+                if(array[checkCell] == n) goriz++;
                 checkCell++;
             }
             if(goriz == 3) {
@@ -175,7 +177,7 @@ public class ActivityGame extends Activity implements View.OnClickListener {
         for (int i = 0; i <= 3; i++) {
             vertik = 0;
             for (int j = 0; j < 3; j++) {
-                if(j != 3 && array[checkCell] == n) vertik++;
+                if(array[checkCell] == n) vertik++;
                 checkCell += 3;
             }
             checkCell = i;
@@ -186,7 +188,7 @@ public class ActivityGame extends Activity implements View.OnClickListener {
 
         checkCell = 0;
         for (int j = 0; j < 3; j++) {
-            if(j != 3 && array[checkCell] == n) diag++;
+            if(array[checkCell] == n) diag++;
             checkCell += 4;
         }
         if(diag == 3) {
@@ -197,7 +199,7 @@ public class ActivityGame extends Activity implements View.OnClickListener {
         checkCell = 0;
         for (int j = 0; j < 3; j++) {
             checkCell += 2;
-            if(j != 3 && array[checkCell] == n) diag++;
+            if(array[checkCell] == n) diag++;
         }
         if(diag == 3) {
             return true;
@@ -206,9 +208,19 @@ public class ActivityGame extends Activity implements View.OnClickListener {
         return false;
     }
 
-    private void status(String str) {
+    private void status(int i) {
         TextView tvStatus = (TextView) findViewById(R.id.tvStatus);
-        tvStatus.setText(str);
+        if (i==0){
+            tvStatus.setText(R.string.oTurn);
+        }else if (i == 1) {
+            tvStatus.setText(R.string.xTurn);
+        }else if (i == 2){
+            tvStatus.setText(R.string.xwin);
+        }else if (i == 3){
+            tvStatus.setText(R.string.owin);
+        }else if (i == 4){
+            tvStatus.setText(R.string.draw);
+        }
     }
 
 }
