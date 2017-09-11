@@ -20,6 +20,7 @@ public class ActivityGame extends Activity implements View.OnClickListener {
     boolean stopGame;
     int gameMode;
     int turn;
+    TextView tvStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,26 @@ public class ActivityGame extends Activity implements View.OnClickListener {
 
         gameMode = getIntent().getIntExtra("game_mode", 1);
         turn = 1;
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState){
+        outState.putIntArray("array", array);
+        outState.putInt("turn",turn);
+        TextView tvStat = (TextView) findViewById(R.id.tvStatus);
+        outState.putString("status", tvStat.getText().toString());
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        array = savedInstanceState.getIntArray("array");
+        turn = savedInstanceState.getInt("turn");
+        String status = savedInstanceState.getString("status");
+        TextView tvStat = (TextView) findViewById(R.id.tvStatus);
+        tvStat.setText(status);
+        draw();
     }
 
     @Override
@@ -110,6 +131,16 @@ public class ActivityGame extends Activity implements View.OnClickListener {
         }
     }
 
+    public void draw(){
+        for(int i = 0; i < 9; i++){
+            if (array[i]==1){
+                arrCell[i].setImageBitmap(imageX);
+            }
+            if (array[i]==2){
+                arrCell[i].setImageBitmap(imageO);
+            }
+        }
+    }
     private void moving(int n) {
         if(stopGame) return;
         int oturn = 0;
@@ -209,7 +240,7 @@ public class ActivityGame extends Activity implements View.OnClickListener {
     }
 
     private void status(int i) {
-        TextView tvStatus = (TextView) findViewById(R.id.tvStatus);
+        tvStatus = (TextView) findViewById(R.id.tvStatus);
         if (i==0){
             tvStatus.setText(R.string.oTurn);
         }else if (i == 1) {
