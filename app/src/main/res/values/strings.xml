@@ -13,4 +13,5 @@
     <string name="htp">How to play</string>
     <string name="oTurn">O turn</string>
     <string name="xTurn">X turn</string>
+    <string name="present">Present</string>
 </resources>

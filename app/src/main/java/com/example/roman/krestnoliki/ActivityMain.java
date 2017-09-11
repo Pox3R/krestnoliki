@@ -32,7 +32,7 @@ public class ActivityMain extends Activity {
 
             @Override
             public void onFinish() {
-                present.setText("Представляет");
+                present.setText(R.string.present);
             }
         }.start();
 
@@ -42,7 +42,7 @@ public class ActivityMain extends Activity {
 
             @Override
             public void onFinish() {
-                present.setText("Крестики-\n  Нолики");
+                present.setText(R.string.app_name);
             }
         }.start();
 
